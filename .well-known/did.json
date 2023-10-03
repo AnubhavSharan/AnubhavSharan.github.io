@@ -1,0 +1,48 @@
+{
+  "id": "did:web:jaishreeram.me",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:jaishreeram.me"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://jaishreeram.me/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/6e02fd91-6875-4ecf-a515-75072595bc70"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#574abd35d89a474eaf1182d2009af85fvcSigningKey-7b546",
+      "controller": "did:web:jaishreeram.me",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "gjSnd2sZEw87UoCCjyqgEqB8GxLCuPUtD7KMawexv5U",
+        "y": "n3oxFhPJWykaQ5I6zHS5LEsw3MF7jN8-knwPIwK6nJQ"
+      }
+    }
+  ],
+  "authentication": [
+    "#574abd35d89a474eaf1182d2009af85fvcSigningKey-7b546"
+  ],
+  "assertionMethod": [
+    "#574abd35d89a474eaf1182d2009af85fvcSigningKey-7b546"
+  ]
+}
